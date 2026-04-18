@@ -1,0 +1,72 @@
+[project]
+name = "qdev-laura"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "qiskit>=1.2.0",
+    "qiskit-ibm-ai-local-transpiler==0.4.2",
+    "qiskit-ibm-transpiler>=0.14.1",
+    "matplotlib>=3.8.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.5",
+    "ruff>=0.13.2",
+    "ty>=0.0.1a21",
+    "pylatexenc>=2.10",
+    "mqt.qcec>=3.0.0,<3.3.0",
+    "pandas>=2.2.2",
+    "pyyaml>=6.0.0",
+    "qiskit-aer>=0.17.2",
+    # GUOQ dependencies
+    "bqskit",
+    "numpy",
+    "pyzx",
+    "wisq>=0.2.4",
+    # GUOQ comparison benchmark optimizers
+    # Note: pytket requires networkx>=2.8.8, but qiskit-ibm-ai-local-transpiler requires networkx==2.8.5
+    # The AI transpiler breaks at runtime with networkx 3.x, so we use a sub-environment for pytket
+    # Setup: uv venv .venv-tket --python 3.12
+    #        uv pip install --python .venv-tket/bin/python pytket qiskit numpy
+    # Usage: Use benchmarks.tket_runner module to run pytket code in isolated environment
+    # Note: pyvoqc is incompatible with Qiskit 1.x - not included until updated
+    # Install manually when compatible: uv pip install git+https://github.com/inQWIRE/pyvoqc.git
+    # Benchpress dependencies
+    "pytest",
+    "pytest-memray",
+    "wrapt_timeout_decorator",
+    "packaging>=20",
+    # Custom pytest-benchmark fork required by benchpress
+    "pytest-benchmark @ git+https://github.com/1ucian0/pytest-benchmark.git@timeout-skiplist/forkserver/decorator",
+    "torch>=2.4,<2.5",
+    "torchvision==0.19.0",
+    "torchaudio==2.4.0",
+    "pytest-cov>=7.0.0",
+    "rich>=13.0.0",
+    "vulture>=2.16",
+]
+
+[project.optional-dependencies]
+# tket = ["pytket>=1.36.1"]  # Managed in separate .venv-tket environment
+# See comments above and benchmarks/tket_runner.py for usage
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["benchmarks", "scripts", "tests", "notebooks"]
+extend-exclude = ["benchpress", "guoq", "*.ipynb", "tutorial"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ty]
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.ty.src]
+include = ["benchmarks", "scripts", "tests", "notebooks"]
+exclude = ["benchpress", "guoq", "benchmarks/ai_transpile/tket_optimize_template.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

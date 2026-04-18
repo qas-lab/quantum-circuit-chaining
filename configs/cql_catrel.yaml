@@ -1,0 +1,34 @@
+algorithm: cql
+reward_type: reward_category_relative
+database_path: data/trajectories_combined.db
+output_dir: data/rl_checkpoints
+
+# Architecture
+state_dim: 26
+action_dim: 5
+hidden_dims: [128, 128]
+
+# Optimization
+learning_rate: 0.0003
+batch_size: 64
+num_epochs: 200
+weight_decay: 0.0001
+dropout: 0.1
+grad_clip: 1.0
+
+# RL hyperparameters
+gamma: 0.99
+cql_alpha: 1.0
+cql_target_update_rate: 0.005
+
+# Data splits
+val_fraction: 0.15
+test_fraction: 0.15
+split_by_circuit: true
+
+# Runtime
+seed: 42
+device: auto
+log_interval: 10
+eval_interval: 10
+num_workers: 0

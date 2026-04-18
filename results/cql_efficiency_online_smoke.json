@@ -1,0 +1,469 @@
+{
+  "checkpoint": "data/rl_checkpoints/cql_reward_efficiency_1772739349",
+  "algorithm": "cql",
+  "split": "test",
+  "policy_metrics": {
+    "action_agreement": 0.19805664668182757,
+    "policy_entropy": 0.9981052279472351,
+    "num_samples": 4837,
+    "accuracy_action_0": 0.0,
+    "accuracy_action_1": 0.0,
+    "accuracy_action_2": 0.5724907063197026,
+    "accuracy_action_3": 0.13501144164759726,
+    "accuracy_action_4": 0.24561403508771928,
+    "policy_freq_action_0": 0.0,
+    "policy_freq_action_1": 0.0008269588587967748,
+    "policy_freq_action_2": 0.5689476948521811,
+    "policy_freq_action_3": 0.14947281372751706,
+    "policy_freq_action_4": 0.28075253256150506
+  },
+  "baselines": {
+    "random": {
+      "action_agreement": 0.18937357866446144,
+      "expected_agreement": 0.2,
+      "data_freq_action_0": 0.20219144097581146,
+      "data_freq_action_1": 0.20611949555509612,
+      "data_freq_action_2": 0.22245193301633243,
+      "data_freq_action_3": 0.18069051064709532,
+      "data_freq_action_4": 0.18854661980566467
+    },
+    "greedy_most_common": {
+      "action_agreement": 0.22245193301633243,
+      "chosen_action": 2,
+      "data_freq_action_0": 0.20219144097581146,
+      "data_freq_action_1": 0.20611949555509612,
+      "data_freq_action_2": 0.22245193301633243,
+      "data_freq_action_3": 0.18069051064709532,
+      "data_freq_action_4": 0.18854661980566467
+    },
+    "best_single": {
+      "action_agreement": 0.22245193301633243,
+      "chosen_action": 2,
+      "mean_reward": -0.597642098302039,
+      "data_freq_action_0": 0.20219144097581146,
+      "data_freq_action_1": 0.20611949555509612,
+      "data_freq_action_2": 0.22245193301633243,
+      "data_freq_action_3": 0.18069051064709532,
+      "data_freq_action_4": 0.18854661980566467
+    },
+    "oracle_best_per_circuit": {
+      "action_agreement": 0.2340293570394873,
+      "num_circuits": 405,
+      "data_freq_action_0": 0.20219144097581146,
+      "data_freq_action_1": 0.20611949555509612,
+      "data_freq_action_2": 0.22245193301633243,
+      "data_freq_action_3": 0.18069051064709532,
+      "data_freq_action_4": 0.18854661980566467
+    }
+  },
+  "oracle_metrics": {
+    "oracle_agreement": 0.5901234567901235,
+    "oracle_baseline": 1.0,
+    "best_single_oracle": 0.6592592592592592,
+    "best_single_oracle_action": 2,
+    "num_circuits": 405,
+    "random_oracle_expected": 0.2
+  },
+  "training_metadata": {
+    "elapsed_seconds": 463.75364685058594,
+    "num_epochs": 200,
+    "train_size": 22731,
+    "val_size": 4766,
+    "test_size": 4837,
+    "final_metrics": {
+      "train/loss": 20988.461691459914,
+      "train/td_loss": 20968.365964545294,
+      "train/cql_loss": 20.096204505877548,
+      "train/mean_q": -20.48231023349119,
+      "train/accuracy": 0.20520780135071678,
+      "val/action_accuracy": 0.21186111132303873
+    }
+  },
+  "online_evaluation": {
+    "num_circuits": 50,
+    "num_executed": 9,
+    "num_improved": 4,
+    "success_rate": 0.4444444444444444,
+    "mean_2q_improvement": 0.23371827484878954,
+    "max_2q_improvement": 0.6909090909090909,
+    "per_circuit": [
+      {
+        "circuit_name": "artifact_artifact_grover_5__tket__wisq_bqskit",
+        "circuit_id": 2049,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_16__qiskit_standard",
+        "circuit_id": 2,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_8__tket",
+        "circuit_id": 10,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_16__qiskit_standard__tket",
+        "circuit_id": 2060,
+        "optimizer": "tket",
+        "error": "\"<input>:8,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qpt__qiskit_standard",
+        "circuit_id": 16,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:7,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N14_3reps__qiskit_standard__tket",
+        "circuit_id": 2065,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qpt__qiskit_ai",
+        "circuit_id": 17,
+        "optimizer": "qiskit_ai",
+        "initial_2q": 0,
+        "final_2q": 0,
+        "improvement": 0.0,
+        "success": true,
+        "elapsed_s": 0.16170763969421387
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N14_3reps__qiskit_standard__wisq_rules",
+        "circuit_id": 2069,
+        "optimizer": "tket",
+        "error": "\"<input>:8,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qv_N014_12345__qiskit_ai",
+        "circuit_id": 30,
+        "optimizer": "qiskit_standard",
+        "initial_2q": 612,
+        "final_2q": 528,
+        "improvement": 0.13725490196078433,
+        "success": true,
+        "elapsed_s": 0.524099588394165
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_N017__wisq_bqskit__tket",
+        "circuit_id": 2079,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_N017__wisq_bqskit__qiskit_ai",
+        "circuit_id": 2081,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_N017__wisq_bqskit__wisq_rules",
+        "circuit_id": 2083,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_square_heisenberg_N9__qiskit_ai",
+        "circuit_id": 35,
+        "optimizer": "qiskit_standard",
+        "initial_2q": 165,
+        "final_2q": 51,
+        "improvement": 0.6909090909090909,
+        "success": true,
+        "elapsed_s": 0.025455713272094727
+      },
+      {
+        "circuit_name": "artifact_square_heisenberg_N9__wisq_rules",
+        "circuit_id": 37,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:8,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_vbe_adder_3__qiskit_standard__qiskit_ai",
+        "circuit_id": 2086,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:7,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_vbe_adder_3__qiskit_standard__wisq_rules",
+        "circuit_id": 2088,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_rb__wisq_rules__tket",
+        "circuit_id": 2089,
+        "optimizer": "qiskit_ai",
+        "initial_2q": 0,
+        "final_2q": 0,
+        "improvement": 0.0,
+        "success": true,
+        "elapsed_s": 0.13878107070922852
+      },
+      {
+        "circuit_name": "artifact_real_amplitudes_16_r2__wisq_rules",
+        "circuit_id": 42,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_rb__wisq_rules__qiskit_ai",
+        "circuit_id": 2091,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:6,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N12_3reps__wisq_bqskit__tket",
+        "circuit_id": 2094,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qv_N020_12345__wisq_bqskit",
+        "circuit_id": 46,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qaoa_barabasi_albert_N7_3reps__wisq_rules",
+        "circuit_id": 52,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_N018__qiskit_standard__tket",
+        "circuit_id": 2104,
+        "optimizer": "tket",
+        "error": "\"<input>:6,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qft_N018__qiskit_standard__qiskit_standard",
+        "circuit_id": 2105,
+        "optimizer": "tket",
+        "error": "\"<input>:6,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_hwb11__wisq_rules",
+        "circuit_id": 60,
+        "optimizer": "wisq_bqskit",
+        "error": "\"<input>:28,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_grover_5__tket",
+        "circuit_id": 61,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N8_3reps__wisq_rules__qiskit_ai",
+        "circuit_id": 2111,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N8_3reps__wisq_rules__wisq_rules",
+        "circuit_id": 2113,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_efficient_su2_12__wisq_bqskit__qiskit_ai",
+        "circuit_id": 2116,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_barenco_tof_5__wisq_rules",
+        "circuit_id": 75,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:9,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_N009__qiskit_standard",
+        "circuit_id": 77,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_N009__qiskit_ai",
+        "circuit_id": 78,
+        "optimizer": "tket",
+        "initial_2q": 195,
+        "final_2q": 72,
+        "improvement": 0.6307692307692307,
+        "success": true,
+        "elapsed_s": 2.94590163230896
+      },
+      {
+        "circuit_name": "artifact_qft_N009__wisq_bqskit",
+        "circuit_id": 79,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qv_N014_12345__tket__qiskit_ai",
+        "circuit_id": 2130,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_efficient_su2_12_r2__wisq_rules",
+        "circuit_id": 85,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_rb__qiskit_standard",
+        "circuit_id": 87,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:6,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_rb__wisq_bqskit",
+        "circuit_id": 89,
+        "optimizer": "qiskit_ai",
+        "initial_2q": 0,
+        "final_2q": 0,
+        "improvement": 0.0,
+        "success": true,
+        "elapsed_s": 0.16596221923828125
+      },
+      {
+        "circuit_name": "artifact_artifact_tof_3__tket__wisq_rules",
+        "circuit_id": 2137,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_gf2^4_mult__qiskit_ai",
+        "circuit_id": 93,
+        "optimizer": "qiskit_ai",
+        "initial_2q": 3,
+        "final_2q": 3,
+        "improvement": 0.0,
+        "success": true,
+        "elapsed_s": 0.1741800308227539
+      },
+      {
+        "circuit_name": "artifact_artifact_gf2^5_mult__tket__wisq_bqskit",
+        "circuit_id": 2141,
+        "optimizer": "tket",
+        "error": "\"<input>:7,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N7_3reps__qiskit_ai__tket",
+        "circuit_id": 2147,
+        "optimizer": "tket",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_csla_mux_3__qiskit_standard__tket",
+        "circuit_id": 2152,
+        "optimizer": "tket",
+        "error": "\"<input>:6,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_4__wisq_rules",
+        "circuit_id": 105,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:7,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_qft_N014__qiskit_ai",
+        "circuit_id": 108,
+        "optimizer": "tket",
+        "initial_2q": 512,
+        "final_2q": 182,
+        "improvement": 0.64453125,
+        "success": true,
+        "elapsed_s": 3.882821798324585
+      },
+      {
+        "circuit_name": "artifact_qft_N014__wisq_rules",
+        "circuit_id": 110,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_qaoa_barabasi_albert_N5_3reps__wisq_rules__qiskit_ai",
+        "circuit_id": 2164,
+        "optimizer": "tket",
+        "error": "\"<input>:4,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_gf2^6_mult__qiskit_ai",
+        "circuit_id": 118,
+        "optimizer": "qiskit_ai",
+        "initial_2q": 7,
+        "final_2q": 7,
+        "improvement": 0.0,
+        "success": true,
+        "elapsed_s": 0.21347594261169434
+      },
+      {
+        "circuit_name": "artifact_qv_N009_12345__tket",
+        "circuit_id": 121,
+        "optimizer": "qiskit_standard",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_artifact_rc_adder_6__wisq_bqskit__tket",
+        "circuit_id": 2171,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:5,0: 'sx' is not defined in this scope\"",
+        "success": false
+      },
+      {
+        "circuit_name": "artifact_tof_3__tket",
+        "circuit_id": 126,
+        "optimizer": "qiskit_ai",
+        "error": "\"<input>:8,0: 'sx' is not defined in this scope\"",
+        "success": false
+      }
+    ]
+  }
+}

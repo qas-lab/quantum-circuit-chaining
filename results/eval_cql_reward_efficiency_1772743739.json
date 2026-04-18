@@ -1,0 +1,82 @@
+{
+  "checkpoint": "data/rl_checkpoints/cql_reward_efficiency_1772743739",
+  "algorithm": "cql",
+  "split": "test",
+  "policy_metrics": {
+    "action_agreement": 0.18272969101698383,
+    "policy_entropy": 1.1127558946609497,
+    "num_samples": 4887,
+    "accuracy_action_0": 0.0,
+    "accuracy_action_1": 0.0,
+    "accuracy_action_2": 0.6636904761904762,
+    "accuracy_action_3": 0.09371428571428571,
+    "accuracy_action_4": 0.1392156862745098,
+    "policy_freq_action_0": 0.0,
+    "policy_freq_action_1": 0.0,
+    "policy_freq_action_2": 0.7141395539185594,
+    "policy_freq_action_3": 0.11152036013914467,
+    "policy_freq_action_4": 0.17434008594229589
+  },
+  "baselines": {
+    "random": {
+      "action_agreement": 0.18907305095150398,
+      "expected_agreement": 0.2,
+      "data_freq_action_0": 0.21076324943728258,
+      "data_freq_action_1": 0.19521178637200737,
+      "data_freq_action_2": 0.20626151012891344,
+      "data_freq_action_3": 0.17904644976468181,
+      "data_freq_action_4": 0.2087170042971148
+    },
+    "greedy_most_common": {
+      "action_agreement": 0.21076324943728258,
+      "chosen_action": 0,
+      "data_freq_action_0": 0.21076324943728258,
+      "data_freq_action_1": 0.19521178637200737,
+      "data_freq_action_2": 0.20626151012891344,
+      "data_freq_action_3": 0.17904644976468181,
+      "data_freq_action_4": 0.2087170042971148
+    },
+    "best_single": {
+      "action_agreement": 0.20626151012891344,
+      "chosen_action": 2,
+      "mean_reward": -0.424870134223648,
+      "data_freq_action_0": 0.21076324943728258,
+      "data_freq_action_1": 0.19521178637200737,
+      "data_freq_action_2": 0.20626151012891344,
+      "data_freq_action_3": 0.17904644976468181,
+      "data_freq_action_4": 0.2087170042971148
+    },
+    "oracle_best_per_circuit": {
+      "action_agreement": 0.23900143237159813,
+      "num_circuits": 421,
+      "data_freq_action_0": 0.21076324943728258,
+      "data_freq_action_1": 0.19521178637200737,
+      "data_freq_action_2": 0.20626151012891344,
+      "data_freq_action_3": 0.17904644976468181,
+      "data_freq_action_4": 0.2087170042971148
+    }
+  },
+  "oracle_metrics": {
+    "oracle_agreement": 0.6128266033254157,
+    "oracle_baseline": 1.0,
+    "best_single_oracle": 0.6888361045130641,
+    "best_single_oracle_action": 2,
+    "num_circuits": 421,
+    "random_oracle_expected": 0.2
+  },
+  "training_metadata": {
+    "elapsed_seconds": 480.25175857543945,
+    "num_epochs": 200,
+    "train_size": 23799,
+    "val_size": 5098,
+    "test_size": 4887,
+    "final_metrics": {
+      "train/loss": 3.089258210633391,
+      "train/td_loss": 0.4349468299538218,
+      "train/cql_loss": 2.654311380719626,
+      "train/mean_q": -2.8702035841121467,
+      "train/accuracy": 0.2121196847449067,
+      "val/action_accuracy": 0.19859561026096345
+    }
+  }
+}

@@ -1,0 +1,96 @@
+# VSCode
+.vscode/
+
+# DS Store
+.DS_Store
+
+# Environment variables
+.env
+
+# Maven build artifacts (GUOQ)
+guoq/target/
+
+# .cursor rules
+.cursor/
+
+# .claude rules
+.claude/
+
+# Benchmark reports
+reports/
+
+# Coverage reports
+.coverage
+
+# GUOQ build artifacts
+guoq/target/
+out.json
+
+# pycache
+**/__pycache__/**
+
+# Virtual environments
+.venv/
+.venv-tket/
+
+# RL Trajectory data (large files)
+data/trajectories.db
+data/trajectories_step2.db
+data/trajectories_step3.db
+data/trajectories_combined.db
+data/trajectories_combined.db-shm
+data/trajectories_combined.db-wal
+data/trajectories_step3.db-shm
+data/trajectories_step3.db-wal
+data/benchpress_circuits/
+data/artifacts_step2/
+data/artifacts_step3/
+data/rl_checkpoints/
+
+# GUOQ benchmark data
+data/trajectories_guoq.db
+data/trajectories_guoq_step2.db
+data/artifacts_guoq/
+data/artifacts_guoq_step2/
+
+# Pre-fix backup snapshots
+data/artifacts_pre_fix_*/
+data/trajectories_pre_fix_*.db
+
+# Temporary files
+tmp*.py
+
+# Personal research notes
+paper_notes.md
+
+# Generated transpiler outputs (regenerate via grid search / import pipeline)
+data/artifacts/
+data/trajectories_online.db
+data/online_rollout_artifacts/
+results/online_rl_pilot/
+
+# Local logs and ad-hoc exports
+data/*.log
+data/results_*.csv
+logs/
+
+# Local agent/orchestration state
+.hermes/
+
+# Local release packaging output
+release/*.tar.gz
+release/checksums.sha256
+release/qdev-laura_dataverse_upload.tar.gz
+
+# Paper build outputs and review snapshots
+paper/main.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/missfont.log
+paper/page*.png
+paper/*_final.png

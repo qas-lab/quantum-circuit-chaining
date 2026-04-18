@@ -1,0 +1,36 @@
+algorithm: dt
+reward_type: reward_efficiency
+database_path: data/trajectories_combined.db
+output_dir: data/rl_checkpoints
+
+# Architecture
+state_dim: 26
+action_dim: 5
+hidden_dims: [64, 64]  # unused by DT but required by TrainingConfig
+
+# DT-specific architecture
+d_model: 64
+n_heads: 4
+n_layers: 2
+max_ep_len: 3
+target_return: 0.3  # desired 30% improvement at inference
+
+# Optimization
+learning_rate: 0.0001
+batch_size: 64
+num_epochs: 300
+weight_decay: 0.0001
+dropout: 0.1
+grad_clip: 1.0
+
+# Data splits
+val_fraction: 0.15
+test_fraction: 0.15
+split_by_circuit: true
+
+# Runtime
+seed: 42
+device: auto
+log_interval: 10
+eval_interval: 10
+num_workers: 0
